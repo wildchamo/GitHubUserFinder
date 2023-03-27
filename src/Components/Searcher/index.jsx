@@ -1,12 +1,16 @@
 import React from "react";
-import { Stack, TextField, IconButton } from "@mui/system";
+import { Stack, TextField, IconButton } from "@mui/material";
 
-const Searcher = () => {
-
+function Searcher() {
+  return (
     <Stack>
-        <TextField></TextField>
+        holaa,soy jose
+        <TextField/>    
         <IconButton></IconButton>
     </Stack>
+  );
 };
 
-export { Searcher };
+export default Searcher ;
+
+

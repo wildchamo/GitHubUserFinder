@@ -1,6 +1,8 @@
-import { Container } from "@mui/system";
+import React from "react";
+import { Container } from "@mui/material";
+import Searcher from "./Components/Searcher";
 
-function App() {
+const App = () =>{
   return (
     <Container
       sx={{
@@ -9,12 +11,12 @@ function App() {
         height: "500px",
         borderRadius: "16px",
         marginTop: "40px",
-        display:'flex',
-        flexDirection:"column",
-        alignItems:'center'
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
       }}
     >
-      holaa, soy Jose
+      <Searcher />
     </Container>
   );
 }
