@@ -1,5 +1,6 @@
 import React from "react";
-import { Stack, TextField, IconButton } from "@mui/material";
+import { Stack, TextField, IconButton, InputAdornment } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 
 function Searcher() {
   return (
@@ -14,12 +15,19 @@ function Searcher() {
         id="outlined-basic"
         label="GitHub User"
         placeholder="Introduce the github user u wanna search"
-        defaultValue="Hello World"
         sx={{
           width: "90%",
         }}
+        InputProps={{
+          endAdornment: (
+            <InputAdornment position="end">
+              <IconButton>
+              <SearchIcon />
+              </IconButton>
+            </InputAdornment>
+          ),
+        }}
       />
-      <IconButton></IconButton>
     </Stack>
   );
 }
