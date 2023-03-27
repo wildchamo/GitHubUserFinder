@@ -1,10 +1,9 @@
-import Button from '@mui/material/Button';
-
+import { Container } from "@mui/system";
 
 function App() {
-  return <div>
-    <Button variant="contained">Hola! Soy un botón</Button>
-  </div>;
+  return <Container>
+    
+  </Container>;
 }
 
 export default App;
