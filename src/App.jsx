@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "@mui/material";
-import Searcher from "./Components/Searcher";
+import {Searcher} from "./Components/Searcher";
 
 const App = () =>{
   return (

@@ -11,6 +11,6 @@ function Searcher() {
   );
 };
 
-export default Searcher ;
+export  {Searcher} ;
 
 
