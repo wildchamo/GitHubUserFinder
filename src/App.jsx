@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 import { Searcher } from "./Components/Searcher";
 
 const App = () => {
-  const [inputUser, setInputUser] = useState("");
+  const [inputUser, setInputUser] = useState("hola,soy Jose");
   const [userState, setUserState] = useState("");
 
   return (
@@ -19,7 +19,7 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <Searcher inputUser={inputUser} userState={userState} />
+      <Searcher inputUser={inputUser} setInputUser={setInputUser} />
     </Container>
   );
 };

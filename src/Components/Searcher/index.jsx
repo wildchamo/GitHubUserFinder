@@ -2,7 +2,9 @@ import React from "react";
 import { Stack, TextField, IconButton, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
-function Searcher() {
+function Searcher(props) {
+  const { inputUser, setInputUser } = props;
+
   return (
     <Stack
       sx={{
@@ -22,7 +24,7 @@ function Searcher() {
           endAdornment: (
             <InputAdornment position="end">
               <IconButton>
-              <SearchIcon />
+                <SearchIcon />
               </IconButton>
             </InputAdornment>
           ),
