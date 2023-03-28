@@ -3,19 +3,17 @@ import { Stack, TextField, IconButton, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Searcher(props) {
-  const { inputUser, setInputUser } = props;
-
-  const [valueItem, setValueItem] = useState("");
+  const { setInputUser } = props;
+  const [valueInput, setValueInput] = useState("");
 
   const onSearchValueChange = (event) => {
-    const inputValue = event.target.value; 
-    setValueItem(inputValue);
+    const inputValue = event.target.value;
+    setValueInput(inputValue);
+  };
+  const onHandleSubmit = () => {
+    setInputUser(valueInput);
   };
 
-  console.log(valueItem)
-  const handleSubmit = () => {
-    setInputUser(valueItem)
-  };
   return (
     <Stack
       sx={{
@@ -28,7 +26,7 @@ function Searcher(props) {
         id="outlined-basic"
         label="GitHub User"
         placeholder="Introduce the github user u wanna search"
-        value={valueItem}
+        value={valueInput}
         onChange={onSearchValueChange}
         sx={{
           width: "90%",
@@ -36,7 +34,7 @@ function Searcher(props) {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton onClick={handleSubmit}>
+              <IconButton onClick={onHandleSubmit}>
                 <SearchIcon />
               </IconButton>
             </InputAdornment>
