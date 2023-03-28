@@ -1,8 +1,11 @@
 import React from "react";
 import { Container } from "@mui/material";
-import {Searcher} from "./Components/Searcher";
+import { Searcher } from "./Components/Searcher";
 
-const App = () =>{
+const App = () => {
+  const [inputUser, setInputUser] = useState("octocat");
+  const [userState, setUserState] = useState("");
+
   return (
     <Container
       sx={{
@@ -16,9 +19,9 @@ const App = () =>{
         alignItems: "center",
       }}
     >
-      <Searcher />
+      <Searcher inputUser={inputUser} setInputUser={setInputUser} />
     </Container>
   );
-}
+};
 
 export default App;
