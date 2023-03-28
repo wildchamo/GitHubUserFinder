@@ -6,8 +6,6 @@ const App = () => {
   const [inputUser, setInputUser] = useState("");
   const [userState, setUserState] = useState("");
 
-
-  console.log(inputUser)
   return (
     <Container
       sx={{
@@ -21,7 +19,7 @@ const App = () => {
         alignItems: "center",
       }}
     >
-      <Searcher inputUser={inputUser} setInputUser={setInputUser} />
+      <Searcher setInputUser={setInputUser} />
     </Container>
   );
 };

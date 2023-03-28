@@ -1,18 +1,18 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import { Stack, TextField, IconButton, InputAdornment } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 function Searcher(props) {
-  const { inputUser, setInputUser } = props;
+  const { setInputUser } = props;
   const [valueInput, setValueInput] = useState("");
 
-  const onSearchValueChange= (event) =>{
-    const inputValue=event.target.value;
+  const onSearchValueChange = (event) => {
+    const inputValue = event.target.value;
     setValueInput(inputValue);
-  }
-  const onHandleSubmit =()=>{
-    setInputUser(valueInput)
-  }
+  };
+  const onHandleSubmit = () => {
+    setInputUser(valueInput);
+  };
 
   return (
     <Stack
@@ -34,8 +34,7 @@ function Searcher(props) {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton
-              onClick={onHandleSubmit}>
+              <IconButton onClick={onHandleSubmit}>
                 <SearchIcon />
               </IconButton>
             </InputAdornment>
