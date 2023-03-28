@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 import { Searcher } from "./Components/Searcher";
 
 const App = () => {
-  const [inputUser, setInputUser] = useState("hola,soy Jose");
+  const [inputUser, setInputUser] = useState("");
   const [userState, setUserState] = useState("");
 
   return (
