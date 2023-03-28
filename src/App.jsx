@@ -6,6 +6,8 @@ const App = () => {
   const [inputUser, setInputUser] = useState("");
   const [userState, setUserState] = useState("");
 
+
+  console.log(inputUser)
   return (
     <Container
       sx={{

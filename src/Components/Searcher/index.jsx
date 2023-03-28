@@ -10,8 +10,9 @@ function Searcher(props) {
     const inputValue=event.target.value;
     setValueInput(inputValue);
   }
-
-  console.log(valueInput)
+  const onHandleSubmit =()=>{
+    setInputUser(valueInput)
+  }
 
   return (
     <Stack
@@ -33,7 +34,8 @@ function Searcher(props) {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton>
+              <IconButton
+              onClick={onHandleSubmit}>
                 <SearchIcon />
               </IconButton>
             </InputAdornment>
