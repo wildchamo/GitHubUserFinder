@@ -7,14 +7,15 @@ const App = () => {
   const [inputUser, setInputUser] = useState("octocat");
   const [userState, setUserState] = useState("");
 
-  const getGUser= async(u)=>{
-    const userResponse= await getUser(u);
+  const getGUser= async(user)=>{
+    const userResponse= await getUser(user);
     console.log(userResponse)
   }
 
+
   useEffect(() => {
-    getGUser("wildchamo")
-  }, []);
+    getGUser(inputUser)
+  }, [inputUser]);
 
   return (
     <Container
