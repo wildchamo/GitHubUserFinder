@@ -1,20 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import { Searcher } from "./Components/Searcher";
-import {getUser} from "./services/users"
+import { getUser } from "./services/users";
 
 const App = () => {
   const [inputUser, setInputUser] = useState("octocat");
   const [userState, setUserState] = useState("");
+  const [notFound, setnotFound] = useState(false);
 
-  const getGUser= async(user)=>{
-    const userResponse= await getUser(user);
-    console.log(userResponse)
-  }
+  const getGUser = async (user) => {
+    try {
+      const userResponse = await getUser(user);
+      setUserState(userResponse)
 
+      console.log(userResponse)
+    } catch (error) {
+      console.log("Error detectado: ", error);
+      setnotFound(true);
+    }
+  };
 
   useEffect(() => {
-    getGUser(inputUser)
+    getGUser(inputUser);
   }, [inputUser]);
 
   return (
