@@ -1,5 +1,6 @@
 import React from "react";
 import { Typography, Stack } from "@mui/material";
+import PaperInformation from "../PaperInformation";
 
 const Description = (props) => {
   const { userState } = props;
@@ -13,8 +14,8 @@ const Description = (props) => {
           <Typography>Este usuario no tiene una descripción :D</Typography>
         )}
       </Stack>
-      {/* <PaperInformation></PaperInformation>
-    <LocationInformation></LocationInformation> */}
+      <PaperInformation userState={userState} />
+      {/* <LocationInformation></LocationInformation> */}
     </React.Fragment>
   );
 };

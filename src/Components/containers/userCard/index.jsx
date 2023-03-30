@@ -4,8 +4,8 @@ import PrincipalInformation from "../../PrincipalInformation";
 import Description from "../description";
 
 const UserCard = (props) => {
-  const { userState } = props;
-  const { avatar_url } = userState;
+    const { userState } = props;
+    const { avatar_url } = userState;
 
   return (
     <Grid container>
