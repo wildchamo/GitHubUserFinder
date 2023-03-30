@@ -32,10 +32,12 @@ const App = () => {
         width: "80vw",
         height: "500px",
         borderRadius: "16px",
-        marginTop: "40px",
+        marginTop: "20px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        marginLeft: "10%",
+
       }}
     >
       <Searcher inputUser={inputUser} setInputUser={setInputUser} />

@@ -35,14 +35,14 @@ function LocationInformation(props) {
         <Stack direction="row" spacing={2}>
           <LanguageIcon />
           {blog != null ? (
-
-              <Link          href={`https://${blog}`}
+            <Link
+              href={`https://${blog}`}
               target="_blank"
               rel="noopener noreferrer"
-              underline="hover">
+              underline="hover"
+            >
               <Typography>{blog}</Typography>
-              
-              </Link>
+            </Link>
           ) : (
             <Typography>No disponible </Typography>
           )}

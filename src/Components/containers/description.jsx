@@ -15,7 +15,7 @@ const Description = (props) => {
           <Typography variant="body1">Este usuario no tiene una descripción :D</Typography>
         )}
       </Stack>
-      <PaperInformation userState={userState} />
+      <PaperInformation  userState={userState} />
       <LocationInformation userState={userState} />
     </React.Fragment>
   );

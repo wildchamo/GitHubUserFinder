@@ -14,6 +14,13 @@ function Searcher(props) {
     setInputUser(valueInput);
   };
 
+
+  function handleKeyPress(e) {
+    var key = e.key;
+   
+        console.log( "You pressed a key: " + key )   
+}
+
   return (
     <Stack
       sx={{
@@ -34,7 +41,7 @@ function Searcher(props) {
         InputProps={{
           endAdornment: (
             <InputAdornment position="end">
-              <IconButton onClick={onHandleSubmit}>
+              <IconButton onClick={onHandleSubmit }  >
                 <SearchIcon />
               </IconButton>
             </InputAdornment>
