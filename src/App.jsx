@@ -12,9 +12,9 @@ const App = () => {
   const getGUser = async (user) => {
     try {
       const userResponse = await getUser(user);
-      setUserState(userResponse)
+      setUserState(userResponse);
 
-      console.log(userResponse)
+      console.log(userResponse);
     } catch (error) {
       console.log("Error detectado: ", error);
       setnotFound(true);
@@ -37,12 +37,11 @@ const App = () => {
         flexDirection: "column",
         alignItems: "center",
         marginLeft: "10%",
-
       }}
     >
       <Searcher inputUser={inputUser} setInputUser={setInputUser} />
 
-      <UserCard userState={userState}/>
+      <UserCard userState={userState} />
     </Container>
   );
 };
