@@ -8,11 +8,11 @@ const Description = (props) => {
   const { bio } = userState;
   return (
     <React.Fragment>
-      <Stack>
+      <Stack sx={{justifyContent:"center"}}>
         {bio != null ? (
-          <Typography>{bio}</Typography>
+          <Typography variant="body1">{bio}</Typography>
         ) : (
-          <Typography>Este usuario no tiene una descripción :D</Typography>
+          <Typography variant="body1">Este usuario no tiene una descripción :D</Typography>
         )}
       </Stack>
       <PaperInformation userState={userState} />
