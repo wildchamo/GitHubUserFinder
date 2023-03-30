@@ -3,7 +3,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LanguageIcon from "@mui/icons-material/Language";
 import BusinessIcon from "@mui/icons-material/Business";
-import { Grid, Stack,Typography } from "@mui/material";
+import { Grid, Stack, Typography } from "@mui/material";
 
 function LocationInformation(props) {
   const { userState } = props;
@@ -14,27 +14,41 @@ function LocationInformation(props) {
       <Grid item xs={6}>
         <Stack>
           <LocationOnIcon />
-          <Typography>{location}</Typography>
+          {location != null ? (
+            <Typography>{location}</Typography>
+          ) : (
+            <Typography>No disponible </Typography>
+          )}{" "}
         </Stack>
       </Grid>
       <Grid item xs={6}>
         <Stack>
           <TwitterIcon />
-          <Typography>{twitter_username}</Typography>
+          {twitter_username != null ? (
+            <Typography>{twitter_username}</Typography>
+          ) : (
+            <Typography>Este usuario no tiene @ en twitter :c </Typography>
+          )}
         </Stack>
       </Grid>
       <Grid item xs={6}>
         <Stack>
           <LanguageIcon />
-          <Typography>{blog}</Typography>
-
+          {blog != null ? (
+            <Typography>{blog}</Typography>
+          ) : (
+            <Typography>No disponible </Typography>
+          )}
         </Stack>
       </Grid>
       <Grid item xs={6}>
         <Stack>
           <BusinessIcon />
-          <Typography>{company}</Typography>
-
+          {company != null ? (
+            <Typography>{company}</Typography>
+          ) : (
+            <Typography>No disponible </Typography>
+          )}
         </Stack>
       </Grid>
     </Grid>
